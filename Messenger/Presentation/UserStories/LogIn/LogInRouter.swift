@@ -21,7 +21,10 @@ final class LogInRouter: ILogInRouter {
     // MARK: - ILogInRouter
     
     func openSignIn() {
+        let assembly = SignInAssembly()
+        let controller = assembly.assemble()
         
+        transitionHandler?.navigationController?.pushViewController(controller, animated: true)
     }
     
     func openChat() {

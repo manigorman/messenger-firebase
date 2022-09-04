@@ -33,7 +33,11 @@ final class LogInViewController: UIViewController {
     
     init(presenter: ILogInPresenter) {
         self.presenter = presenter
+        
         super.init(nibName: nil, bundle: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -55,7 +59,7 @@ final class LogInViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func didTapRegister() {
-        print("register")
+        presenter.didTapRegister()
     }
     
     @objc private func logInButtonTapped() {
@@ -64,6 +68,34 @@ final class LogInViewController: UIViewController {
     
     @objc private func helpButtonTapped() {
         print("help")
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else {
+            return
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+        for recognizer in view.gestureRecognizers ?? [] {
+            view.removeGestureRecognizer(recognizer)
+        }
     }
     
     // MARK: - Private
@@ -123,14 +155,14 @@ final class LogInViewController: UIViewController {
             $0.centerX.equalToSuperview()
             $0.size.equalTo(60)
         }
-
+        
         contentView.addSubview(emailField)
         emailField.snp.makeConstraints {
             $0.top.equalTo(imageView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(40)
         }
-
+        
         contentView.addSubview(passwordField)
         passwordField.snp.makeConstraints {
             $0.top.equalTo(emailField.snp.bottom).offset(20)
