@@ -20,14 +20,18 @@ final class LogInRouter: ILogInRouter {
     
     // MARK: - ILogInRouter
     
+    func openChat() {
+        let assembly = TabBarAssembly()
+        let controller = assembly.assemble()
+        controller.modalPresentationStyle = .fullScreen
+        
+        transitionHandler?.present(controller, animated: true)
+    }
+
     func openSignIn() {
         let assembly = SignInAssembly()
         let controller = assembly.assemble()
         
         transitionHandler?.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    func openChat() {
-        
     }
 }

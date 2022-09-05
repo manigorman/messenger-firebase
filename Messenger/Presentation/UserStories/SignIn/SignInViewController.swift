@@ -58,8 +58,8 @@ final class SignInViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func registerButtonTapped() {
-        print("register")
+    @objc private func signInButtonTapped() {
+        presenter.didTapSignIn()
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -98,7 +98,7 @@ final class SignInViewController: UIViewController {
         
         imageView.image = UIImage(systemName: "person")
         imageView.tintColor = .gray
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         
         firstNameField.autocorrectionType = .no
         firstNameField.autocapitalizationType = .none
@@ -127,7 +127,7 @@ final class SignInViewController: UIViewController {
         
         button.setTitle("Register", for: .normal)
         button.setTitleColor(.link, for: .normal)
-        button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
     }
     
