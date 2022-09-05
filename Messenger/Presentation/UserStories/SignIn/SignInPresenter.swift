@@ -10,6 +10,7 @@ import UIKit
 
 protocol ISignInPresenter: AnyObject {
     func viewDidLoad()
+    func didTapSignIn()
 }
 
 final class SignInPresenter {
@@ -35,7 +36,12 @@ final class SignInPresenter {
 // MARK: - ISignInPresenter
 
 extension SignInPresenter: ISignInPresenter {
+    
     func viewDidLoad() {
         print("view did load")
+    }
+    
+    func didTapSignIn() {
+        router.openChat()
     }
 }

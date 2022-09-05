@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol ISignInRouter: AnyObject {
+    func openChat()
 }
 
 final class SignInRouter: ISignInRouter {
@@ -18,4 +19,11 @@ final class SignInRouter: ISignInRouter {
     
     // MARK: - ISignInRouter
     
+    func openChat() {
+        let assembly = TabBarAssembly()
+        let controller = assembly.assemble()
+        controller.modalPresentationStyle = .fullScreen
+        
+        transitionHandler?.present(controller, animated: true)
+    }
 }

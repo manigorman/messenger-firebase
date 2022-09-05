@@ -37,9 +37,30 @@ final class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         presenter.viewDidLoad()
-        view.backgroundColor = .purple
+        
+        setUpUI()
+        setUpConstraints()
+        setUpDelegates()
+    }
+    
+    // MARK: - Actions
+    
+    // MARK: - Private
+    
+    private func setUpUI() {
+        view.backgroundColor = .red
+    }
+    
+    private func setUpConstraints() {
+        
+    }
+    
+    private func setUpDelegates() {
+        
     }
 }
+
+// MARK: - IChatView
 
 extension ChatViewController: IChatView {
     

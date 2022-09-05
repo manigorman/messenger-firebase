@@ -37,9 +37,30 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         presenter.viewDidLoad()
-        view.backgroundColor = .systemPink
+        
+        setUpUI()
+        setUpConstraints()
+        setUpDelegates()
+    }
+    
+    // MARK: - Actions
+    
+    // MARK: - Private
+    
+    private func setUpUI() {
+        view.backgroundColor = .blue
+    }
+    
+    private func setUpConstraints() {
+        
+    }
+    
+    private func setUpDelegates() {
+        
     }
 }
+
+// MARK: - IProfileView
 
 extension ProfileViewController: IProfileView {
     

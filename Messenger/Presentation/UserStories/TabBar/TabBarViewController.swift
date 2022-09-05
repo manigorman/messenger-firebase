@@ -40,6 +40,8 @@ final class TabBarViewController: UITabBarController {
     }
 }
 
+// MARK: - ITabBarView
+
 extension TabBarViewController: ITabBarView {
     func setControllers(_ controllers: [UIViewController], animated: Bool) {
         self.setViewControllers(controllers, animated: animated)
