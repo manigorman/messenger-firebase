@@ -63,7 +63,7 @@ final class LogInViewController: UIViewController {
     }
     
     @objc private func logInButtonTapped() {
-        print("logIn")
+        presenter.didTapLogIn()
     }
     
     @objc private func helpButtonTapped() {

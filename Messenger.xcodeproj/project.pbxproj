@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A1B8B4A25FFE53B8200EC7D0 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50308E3980433006790E632D /* Pods_Messenger.framework */; };
+		C50A94D128C60B39006965B4 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D028C60B39006965B4 /* TabBarPresenter.swift */; };
+		C50A94D328C60B42006965B4 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D228C60B41006965B4 /* TabBarRouter.swift */; };
+		C50A94D528C60B50006965B4 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D428C60B50006965B4 /* TabBarAssembly.swift */; };
+		C50A94D828C6109D006965B4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D728C6109D006965B4 /* ChatViewController.swift */; };
+		C50A94DA28C610A4006965B4 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D928C610A4006965B4 /* ChatPresenter.swift */; };
+		C50A94DC28C610B7006965B4 /* ChatAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94DB28C610B7006965B4 /* ChatAssembly.swift */; };
+		C50A94DE28C610C0006965B4 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94DD28C610C0006965B4 /* ChatRouter.swift */; };
+		C50A94E128C61449006965B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E028C61449006965B4 /* ProfileViewController.swift */; };
+		C50A94E328C6147F006965B4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E228C6147F006965B4 /* ProfilePresenter.swift */; };
+		C50A94E528C614B8006965B4 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E428C614B8006965B4 /* ProfileRouter.swift */; };
+		C50A94E728C614E3006965B4 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E628C614E3006965B4 /* ProfileAssembly.swift */; };
+		C52DEB5A28C53A1B0096F35A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */; };
 		C5681A3528C5202100F969E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3428C5202100F969E9 /* LogInViewController.swift */; };
 		C5681A3A28C5209F00F969E9 /* LogInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3928C5209F00F969E9 /* LogInAssembly.swift */; };
 		C5681A3C28C520A800F969E9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3B28C520A800F969E9 /* LogInPresenter.swift */; };
@@ -25,6 +37,18 @@
 /* Begin PBXFileReference section */
 		50308E3980433006790E632D /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7453BF05C5D3F39AE3309EAD /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
+		C50A94D028C60B39006965B4 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		C50A94D228C60B41006965B4 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		C50A94D428C60B50006965B4 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
+		C50A94D728C6109D006965B4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C50A94D928C610A4006965B4 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		C50A94DB28C610B7006965B4 /* ChatAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAssembly.swift; sourceTree = "<group>"; };
+		C50A94DD28C610C0006965B4 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		C50A94E028C61449006965B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C50A94E228C6147F006965B4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		C50A94E428C614B8006965B4 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		C50A94E628C614E3006965B4 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C5681A3428C5202100F969E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C5681A3928C5209F00F969E9 /* LogInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAssembly.swift; sourceTree = "<group>"; };
 		C5681A3B28C520A800F969E9 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
@@ -54,6 +78,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50A94D628C61087006965B4 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C50A94D728C6109D006965B4 /* ChatViewController.swift */,
+				C50A94D928C610A4006965B4 /* ChatPresenter.swift */,
+				C50A94DB28C610B7006965B4 /* ChatAssembly.swift */,
+				C50A94DD28C610C0006965B4 /* ChatRouter.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C50A94DF28C6142B006965B4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C50A94E028C61449006965B4 /* ProfileViewController.swift */,
+				C50A94E228C6147F006965B4 /* ProfilePresenter.swift */,
+				C50A94E428C614B8006965B4 /* ProfileRouter.swift */,
+				C50A94E628C614E3006965B4 /* ProfileAssembly.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C52DEB5828C539C40096F35A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */,
+				C50A94D028C60B39006965B4 /* TabBarPresenter.swift */,
+				C50A94D228C60B41006965B4 /* TabBarRouter.swift */,
+				C50A94D428C60B50006965B4 /* TabBarAssembly.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		C5681A3328C51FE800F969E9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				C5681A4828C520FB00F969E9 /* Shared */,
-				C5681A3F28C520C700F969E9 /* SignIn */,
 				C5681A3728C5203C00F969E9 /* LogIn */,
+				C5681A3F28C520C700F969E9 /* SignIn */,
+				C52DEB5828C539C40096F35A /* TabBar */,
+				C50A94D628C61087006965B4 /* Chat */,
+				C50A94DF28C6142B006965B4 /* Profile */,
 			);
 			path = UserStories;
 			sourceTree = "<group>";
@@ -313,15 +373,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50A94DE28C610C0006965B4 /* ChatRouter.swift in Sources */,
 				C5681A4528C520E400F969E9 /* SignInRouter.swift in Sources */,
+				C50A94D528C60B50006965B4 /* TabBarAssembly.swift in Sources */,
 				C5681A4328C520DC00F969E9 /* SignInPresenter.swift in Sources */,
+				C52DEB5A28C53A1B0096F35A /* TabBarViewController.swift in Sources */,
 				C5681A4128C520D500F969E9 /* SignInViewController.swift in Sources */,
+				C50A94E528C614B8006965B4 /* ProfileRouter.swift in Sources */,
 				C5681A4728C520EF00F969E9 /* SignInAssembly.swift in Sources */,
+				C50A94DA28C610A4006965B4 /* ChatPresenter.swift in Sources */,
+				C50A94D328C60B42006965B4 /* TabBarRouter.swift in Sources */,
+				C50A94E128C61449006965B4 /* ProfileViewController.swift in Sources */,
 				C5681A3E28C520BB00F969E9 /* LogInRouter.swift in Sources */,
+				C50A94E728C614E3006965B4 /* ProfileAssembly.swift in Sources */,
 				C5681A3528C5202100F969E9 /* LogInViewController.swift in Sources */,
 				C5AB522F28C51B3300BC2E99 /* AppDelegate.swift in Sources */,
+				C50A94D128C60B39006965B4 /* TabBarPresenter.swift in Sources */,
+				C50A94DC28C610B7006965B4 /* ChatAssembly.swift in Sources */,
 				C5681A3C28C520A800F969E9 /* LogInPresenter.swift in Sources */,
 				C5AB523128C51B3300BC2E99 /* SceneDelegate.swift in Sources */,
+				C50A94D828C6109D006965B4 /* ChatViewController.swift in Sources */,
+				C50A94E328C6147F006965B4 /* ProfilePresenter.swift in Sources */,
 				C5681A3A28C5209F00F969E9 /* LogInAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
