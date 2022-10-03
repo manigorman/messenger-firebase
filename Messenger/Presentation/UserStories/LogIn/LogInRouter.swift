@@ -29,7 +29,7 @@ final class LogInRouter: ILogInRouter {
     }
 
     func openSignIn() {
-        let assembly = SignInAssembly()
+        let assembly = SignUpAssembly()
         let controller = assembly.assemble()
         
         transitionHandler?.navigationController?.pushViewController(controller, animated: true)

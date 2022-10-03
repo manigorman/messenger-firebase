@@ -11,6 +11,7 @@ import SnapKit
 
 protocol ILogInView: AnyObject {
     func update()
+    func shouldActivityIndicatorWorking(_ flag: Bool)
 }
 
 final class LogInViewController: UIViewController {
@@ -19,6 +20,7 @@ final class LogInViewController: UIViewController {
     private let presenter: ILogInPresenter
     
     // Private
+    private lazy var indicator = UIActivityIndicatorView(style: .large)
     
     // UI
     private lazy var scrollView = UIScrollView()
@@ -63,7 +65,16 @@ final class LogInViewController: UIViewController {
     }
     
     @objc private func logInButtonTapped() {
-        presenter.didTapLogIn()
+        guard let email = emailField.text,
+              let password = passwordField.text,
+              !email.isEmpty,
+              !password.isEmpty,
+              password.count >= 6 else {
+            self.alertInfoError()
+            return
+        }
+        
+        presenter.didTapLogIn(email: email, password: password)
     }
     
     @objc private func helpButtonTapped() {
@@ -135,6 +146,8 @@ final class LogInViewController: UIViewController {
         button.addTarget(self, action: #selector(logInButtonTapped), for: .touchUpInside)
         button.setTitleColor(.link, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        
+        indicator.backgroundColor = .systemBackground.withAlphaComponent(0.85)
     }
     
     private func setUpConstraints() {
@@ -183,10 +196,17 @@ final class LogInViewController: UIViewController {
             $0.height.equalTo(40)
             $0.bottom.equalToSuperview().inset(20)
         }
+        
+        view.addSubview(indicator)
+        indicator.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.edges.equalToSuperview()
+        }
     }
     
     private func setUpDelegates() {
-        
+        emailField.delegate = self
+        passwordField.delegate = self
     }
 }
 
@@ -194,5 +214,29 @@ final class LogInViewController: UIViewController {
 
 extension LogInViewController: ILogInView {
     func update() {
+    }
+    
+    func shouldActivityIndicatorWorking(_ flag: Bool) {
+        if flag {
+            indicator.startAnimating()
+        } else {
+            indicator.stopAnimating()
+        }
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension LogInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailField:
+            textField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+            logInButtonTapped()
+        }
+        return true
     }
 }

@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-protocol ISignInRouter: AnyObject {
+protocol ISignUpRouter: AnyObject {
     func openChat()
 }
 
-final class SignInRouter: ISignInRouter {
+final class SignUpRouter: ISignUpRouter {
     
     // Dependencies
     weak var transitionHandler: UIViewController?

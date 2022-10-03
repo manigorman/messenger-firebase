@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  Messenger
 //
 //  Created by Igor Manakov on 04.09.2022.
@@ -8,16 +8,21 @@
 import Foundation
 import UIKit
 
-protocol ISignInView: AnyObject {
+protocol ISignUpView: AnyObject {
     func update()
+    
 }
 
-final class SignInViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     
     // Dependencies
-    private let presenter: ISignInPresenter
+    private let presenter: ISignUpPresenter
     
     // Private
+    private lazy var indicator = UIActivityIndicatorView(style: .large)
+    
+    private var activeField: UITextField?
+    private var lastOffset = CGPoint()
     
     // UI
     private lazy var scrollView = UIScrollView()
@@ -31,7 +36,7 @@ final class SignInViewController: UIViewController {
     
     // MARK: - Initialization
     
-    init(presenter: ISignInPresenter) {
+    init(presenter: ISignUpPresenter) {
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
@@ -58,8 +63,21 @@ final class SignInViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func signInButtonTapped() {
-        presenter.didTapSignIn()
+    @objc private func signUpButtonTapped() {
+        guard let firstName = firstNameField.text,
+              let lastName = lastNameField.text,
+              let email = emailField.text,
+              let password = passwordField.text,
+              !firstName.isEmpty,
+              !lastName.isEmpty,
+              !email.isEmpty,
+              !password.isEmpty,
+              password.count >= 6 else {
+            self.alertInfoError()
+            return
+        }
+        
+        presenter.didTapSignUp(email: email, password: password)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -67,10 +85,10 @@ final class SignInViewController: UIViewController {
         else {
             return
         }
-        
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
+
         let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
@@ -78,7 +96,7 @@ final class SignInViewController: UIViewController {
     
     @objc private func keyboardWillHide(notification: NSNotification) {
         let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
+
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
@@ -127,7 +145,7 @@ final class SignInViewController: UIViewController {
         
         button.setTitle("Register", for: .normal)
         button.setTitleColor(.link, for: .normal)
-        button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
     }
     
@@ -185,18 +203,59 @@ final class SignInViewController: UIViewController {
             $0.height.equalTo(40)
             $0.bottom.equalToSuperview().inset(20)
         }
+        
+        view.addSubview(indicator)
+        indicator.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
     }
     
     private func setUpDelegates() {
-        
+        firstNameField.delegate = self
+        lastNameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
     }
-    
 }
 
 // MARK: - ISignInView
 
-extension SignInViewController: ISignInView {
+extension SignUpViewController: ISignUpView {
+    
     func update() {
         
     }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeField = textField
+        lastOffset = self.scrollView.contentOffset
+        return true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activeField?.resignFirstResponder()
+        activeField = nil
+        
+//        switch textField {
+//        case firstNameField:
+//            textField.resignFirstResponder()
+//            lastNameField.becomeFirstResponder()
+//        case lastNameField:
+//            textField.resignFirstResponder()
+//            emailField.becomeFirstResponder()
+//        case emailField:
+//            textField.resignFirstResponder()
+//            passwordField.becomeFirstResponder()
+//        default:
+//            signUpButtonTapped()
+//            textField.resignFirstResponder()
+//        }
+        return true
+    }
+    
 }
