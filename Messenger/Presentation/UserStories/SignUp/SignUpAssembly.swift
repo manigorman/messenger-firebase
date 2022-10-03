@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-final class SignInAssembly {
+final class SignUpAssembly {
     
     // MARK: - Public
     
     func assemble() -> UIViewController {
-        let router = SignInRouter()
+        let router = SignUpRouter()
         
-        let presenter = SignInPresenter(router: router)
+        let presenter = SignUpPresenter(router: router)
         
-        let controller = SignInViewController(presenter: presenter)
+        let controller = SignUpViewController(presenter: presenter)
         
         presenter.view = controller
         router.transitionHandler = controller
