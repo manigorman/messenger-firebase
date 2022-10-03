@@ -3,263 +3,265 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1B8B4A25FFE53B8200EC7D0 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50308E3980433006790E632D /* Pods_Messenger.framework */; };
-		C50A94D128C60B39006965B4 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D028C60B39006965B4 /* TabBarPresenter.swift */; };
-		C50A94D328C60B42006965B4 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D228C60B41006965B4 /* TabBarRouter.swift */; };
-		C50A94D528C60B50006965B4 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D428C60B50006965B4 /* TabBarAssembly.swift */; };
-		C50A94D828C6109D006965B4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D728C6109D006965B4 /* ChatViewController.swift */; };
-		C50A94DA28C610A4006965B4 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94D928C610A4006965B4 /* ChatPresenter.swift */; };
-		C50A94DC28C610B7006965B4 /* ChatAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94DB28C610B7006965B4 /* ChatAssembly.swift */; };
-		C50A94DE28C610C0006965B4 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94DD28C610C0006965B4 /* ChatRouter.swift */; };
-		C50A94E128C61449006965B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E028C61449006965B4 /* ProfileViewController.swift */; };
-		C50A94E328C6147F006965B4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E228C6147F006965B4 /* ProfilePresenter.swift */; };
-		C50A94E528C614B8006965B4 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E428C614B8006965B4 /* ProfileRouter.swift */; };
-		C50A94E728C614E3006965B4 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50A94E628C614E3006965B4 /* ProfileAssembly.swift */; };
-		C526040628C69A87002A4595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C526040528C69A87002A4595 /* GoogleService-Info.plist */; };
-		C526040828C75BEF002A4595 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C526040728C75BEF002A4595 /* Alert.swift */; };
-		C52DEB5A28C53A1B0096F35A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */; };
-		C5681A3528C5202100F969E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3428C5202100F969E9 /* LogInViewController.swift */; };
-		C5681A3A28C5209F00F969E9 /* LogInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3928C5209F00F969E9 /* LogInAssembly.swift */; };
-		C5681A3C28C520A800F969E9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3B28C520A800F969E9 /* LogInPresenter.swift */; };
-		C5681A3E28C520BB00F969E9 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A3D28C520BB00F969E9 /* LogInRouter.swift */; };
-		C5681A4128C520D500F969E9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A4028C520D500F969E9 /* SignUpViewController.swift */; };
-		C5681A4328C520DC00F969E9 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A4228C520DC00F969E9 /* SignUpPresenter.swift */; };
-		C5681A4528C520E400F969E9 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A4428C520E400F969E9 /* SignUpRouter.swift */; };
-		C5681A4728C520EF00F969E9 /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5681A4628C520EF00F969E9 /* SignUpAssembly.swift */; };
-		C5AB522F28C51B3300BC2E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB522E28C51B3300BC2E99 /* AppDelegate.swift */; };
-		C5AB523128C51B3300BC2E99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB523028C51B3300BC2E99 /* SceneDelegate.swift */; };
-		C5AB523828C51B3300BC2E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5AB523728C51B3300BC2E99 /* Assets.xcassets */; };
-		C5AB523B28C51B3300BC2E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AB523928C51B3300BC2E99 /* LaunchScreen.storyboard */; };
+		08D0328F8464A13AD0849DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4316AF7A6FCEF5618CFBF4BE /* SceneDelegate.swift */; };
+		16D79F24A3955FC1F7BE9CB4 /* ChatAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB43D6930EDAD4B839B43A /* ChatAssembly.swift */; };
+		2312628A26B8728B2626EFAD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648661943390B2E87FAB45B9 /* LogInViewController.swift */; };
+		265123A24378EA35B6C9C945 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2654AC2B9BBB1192875AA /* SignUpPresenter.swift */; };
+		26ED16E364644AC6BE2EA655 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA091174C8A0E17565ACF442 /* SignUpViewController.swift */; };
+		329795D6BDBEC3CFA02D4F9C /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DB236E58E60743E58AB5 /* TabBarAssembly.swift */; };
+		3D9022F928BCD8CED402BC5D /* LogInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19E84082D96DE3CB5B05B1 /* LogInAssembly.swift */; };
+		404C4BC07EF9F56A933D93B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B789DF4A89984A2B14F6847 /* LaunchScreen.storyboard */; };
+		488A2283379ABEAAF560A753 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66C9EBA5F18A02A81966A3 /* TabBarRouter.swift */; };
+		4C43B33CB18EEBC5D3F43DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D486F0AAAAA14C4B66E03939 /* Assets.xcassets */; };
+		5A8023CCA88F46BE5F13C3ED /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725F1BDC421344C62D361BE /* TabBarPresenter.swift */; };
+		5D6132012EE97E6D636171EF /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A650C5469F0C7684903D7F6 /* ChatRouter.swift */; };
+		5E5B44E80B210446603229FA /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBCDC0A6DD4A2D55D0B6F89 /* ChatPresenter.swift */; };
+		63A0C971EB910416001BD9E1 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71690F88F0E67314424D1A31 /* Pods_Messenger.framework */; };
+		806FF080629196BA51B76B21 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62393B41906974940CE38CCE /* LogInPresenter.swift */; };
+		813882B4D8FF0AC3E4EDD826 /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DBA26A19E84A733D38C6 /* SignUpAssembly.swift */; };
+		97BFC98683A4C55FEDD42346 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27CC59BADC71E10B0A727C9 /* ChatViewController.swift */; };
+		9A38670B5A0C8FC3D09D78A9 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A2679B72C45D61958F616 /* ProfileRouter.swift */; };
+		9A8F5EF9F8E5FD694457570E /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4C2447F6865373BE80CCF /* LogInRouter.swift */; };
+		9C39B3F2F932435804E12921 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FAB93F1FE7EB563AA8014 /* ProfileViewController.swift */; };
+		A058AD97EBAB76EE201E1AC4 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5A02F582D2B228145821C /* SignUpRouter.swift */; };
+		AB2653D9A6A38F403D1FE72D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2E8AFBE4E81885F1BC8214 /* GoogleService-Info.plist */; };
+		B283C8BDC5F5143755E8FAC9 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67995A0437E8FE7457A1612 /* ProfileAssembly.swift */; };
+		B5F94AB56F1BE924A4E12F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943278B8952E73A413E31B6E /* AppDelegate.swift */; };
+		E50BB6FE5BE3DE9EBCE3EC3B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6009889A89E2C757E440CB6 /* TabBarViewController.swift */; };
+		EBEE64C77C192D59AC0EBEDB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7706E4968A77484B73FE6 /* Alert.swift */; };
+		FBA1DF4768C87A3666230D81 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA72B23291CE14411B90777E /* ProfilePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50308E3980433006790E632D /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7453BF05C5D3F39AE3309EAD /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
-		C50A94D028C60B39006965B4 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
-		C50A94D228C60B41006965B4 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
-		C50A94D428C60B50006965B4 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
-		C50A94D728C6109D006965B4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		C50A94D928C610A4006965B4 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
-		C50A94DB28C610B7006965B4 /* ChatAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAssembly.swift; sourceTree = "<group>"; };
-		C50A94DD28C610C0006965B4 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
-		C50A94E028C61449006965B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C50A94E228C6147F006965B4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		C50A94E428C614B8006965B4 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
-		C50A94E628C614E3006965B4 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
-		C526040528C69A87002A4595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C526040728C75BEF002A4595 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		C5681A3428C5202100F969E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		C5681A3928C5209F00F969E9 /* LogInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAssembly.swift; sourceTree = "<group>"; };
-		C5681A3B28C520A800F969E9 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
-		C5681A3D28C520BB00F969E9 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
-		C5681A4028C520D500F969E9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		C5681A4228C520DC00F969E9 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		C5681A4428C520E400F969E9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		C5681A4628C520EF00F969E9 /* SignUpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
-		C5AB522B28C51B3300BC2E99 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5AB522E28C51B3300BC2E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5AB523028C51B3300BC2E99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5AB523728C51B3300BC2E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C5AB523A28C51B3300BC2E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C5AB523C28C51B3300BC2E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D63D3C43B0C804CD18B1E483 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
+		1725F1BDC421344C62D361BE /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		1895DB236E58E60743E58AB5 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
+		1A650C5469F0C7684903D7F6 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		4316AF7A6FCEF5618CFBF4BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		499A2679B72C45D61958F616 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		49C0F201F7B4177F9378244A /* Pods-Messenger.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.enterprise.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.enterprise.xcconfig"; sourceTree = "<group>"; };
+		4A66C9EBA5F18A02A81966A3 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		5F130976F8FAB0C2F6835F00 /* Pods-Messenger.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.develop.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.develop.xcconfig"; sourceTree = "<group>"; };
+		62393B41906974940CE38CCE /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		648661943390B2E87FAB45B9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		6CBCDC0A6DD4A2D55D0B6F89 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		71690F88F0E67314424D1A31 /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4FAB93F1FE7EB563AA8014 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8BA7706E4968A77484B73FE6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		943278B8952E73A413E31B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		987788D172FEF52AAA57483A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9955D31E286587DA2BBF239B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A3B4C2447F6865373BE80CCF /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
+		A71D435410193953B4614168 /* Messenger.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA72B23291CE14411B90777E /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		B142DBA26A19E84A733D38C6 /* SignUpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
+		BA091174C8A0E17565ACF442 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C1E5A02F582D2B228145821C /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		C67995A0437E8FE7457A1612 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		D27CC59BADC71E10B0A727C9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D486F0AAAAA14C4B66E03939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC2654AC2B9BBB1192875AA /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		EA2E8AFBE4E81885F1BC8214 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6009889A89E2C757E440CB6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F8BB43D6930EDAD4B839B43A /* ChatAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAssembly.swift; sourceTree = "<group>"; };
+		FC19E84082D96DE3CB5B05B1 /* LogInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C5AB522828C51B3300BC2E99 /* Frameworks */ = {
+		2C49D7D6D1245D93ADA7A2E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B8B4A25FFE53B8200EC7D0 /* Pods_Messenger.framework in Frameworks */,
+				63A0C971EB910416001BD9E1 /* Pods_Messenger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C50A94D628C61087006965B4 /* Chat */ = {
+		3E578D2856A541EAEF5AAC2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C50A94D728C6109D006965B4 /* ChatViewController.swift */,
-				C50A94D928C610A4006965B4 /* ChatPresenter.swift */,
-				C50A94DB28C610B7006965B4 /* ChatAssembly.swift */,
-				C50A94DD28C610C0006965B4 /* ChatRouter.swift */,
+				5F130976F8FAB0C2F6835F00 /* Pods-Messenger.develop.xcconfig */,
+				49C0F201F7B4177F9378244A /* Pods-Messenger.enterprise.xcconfig */,
 			);
-			path = Chat;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		C50A94DF28C6142B006965B4 /* Profile */ = {
+		4ABA4B7726A7F9E255829983 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				C50A94E028C61449006965B4 /* ProfileViewController.swift */,
-				C50A94E228C6147F006965B4 /* ProfilePresenter.swift */,
-				C50A94E428C614B8006965B4 /* ProfileRouter.swift */,
-				C50A94E628C614E3006965B4 /* ProfileAssembly.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		C52DEB5828C539C40096F35A /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				C52DEB5928C53A1B0096F35A /* TabBarViewController.swift */,
-				C50A94D028C60B39006965B4 /* TabBarPresenter.swift */,
-				C50A94D228C60B41006965B4 /* TabBarRouter.swift */,
-				C50A94D428C60B50006965B4 /* TabBarAssembly.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		C5681A3328C51FE800F969E9 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				C5AB522E28C51B3300BC2E99 /* AppDelegate.swift */,
-				C5AB523028C51B3300BC2E99 /* SceneDelegate.swift */,
+				943278B8952E73A413E31B6E /* AppDelegate.swift */,
+				4316AF7A6FCEF5618CFBF4BE /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		C5681A3628C5202900F969E9 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				C5681A3828C5205700F969E9 /* UserStories */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		C5681A3728C5203C00F969E9 /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				C5681A3428C5202100F969E9 /* LogInViewController.swift */,
-				C5681A3928C5209F00F969E9 /* LogInAssembly.swift */,
-				C5681A3B28C520A800F969E9 /* LogInPresenter.swift */,
-				C5681A3D28C520BB00F969E9 /* LogInRouter.swift */,
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
-		C5681A3828C5205700F969E9 /* UserStories */ = {
-			isa = PBXGroup;
-			children = (
-				C5681A4828C520FB00F969E9 /* Shared */,
-				C5681A3728C5203C00F969E9 /* LogIn */,
-				C5681A3F28C520C700F969E9 /* SignUp */,
-				C52DEB5828C539C40096F35A /* TabBar */,
-				C50A94D628C61087006965B4 /* Chat */,
-				C50A94DF28C6142B006965B4 /* Profile */,
-			);
-			path = UserStories;
-			sourceTree = "<group>";
-		};
-		C5681A3F28C520C700F969E9 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				C5681A4028C520D500F969E9 /* SignUpViewController.swift */,
-				C5681A4228C520DC00F969E9 /* SignUpPresenter.swift */,
-				C5681A4428C520E400F969E9 /* SignUpRouter.swift */,
-				C5681A4628C520EF00F969E9 /* SignUpAssembly.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		C5681A4828C520FB00F969E9 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				C526040728C75BEF002A4595 /* Alert.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		C5681A4928C5210900F969E9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		C5681A4A28C5211900F969E9 /* Services */ = {
+		5B84C564AABFE864E4EE7989 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		C5681A4B28C5211E00F969E9 /* SupportingFiles */ = {
+		72D3CD22DEF9B128B311BA5E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				C5AB523728C51B3300BC2E99 /* Assets.xcassets */,
-				C5AB523928C51B3300BC2E99 /* LaunchScreen.storyboard */,
-				C5AB523C28C51B3300BC2E99 /* Info.plist */,
-				C526040528C69A87002A4595 /* GoogleService-Info.plist */,
+				C67995A0437E8FE7457A1612 /* ProfileAssembly.swift */,
+				AA72B23291CE14411B90777E /* ProfilePresenter.swift */,
+				499A2679B72C45D61958F616 /* ProfileRouter.swift */,
+				7F4FAB93F1FE7EB563AA8014 /* ProfileViewController.swift */,
 			);
-			path = SupportingFiles;
+			path = Profile;
 			sourceTree = "<group>";
 		};
-		C5AB522228C51B3300BC2E99 = {
+		7A215E34B2B85BAAA03E4834 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C5AB522D28C51B3300BC2E99 /* Messenger */,
-				C5AB522C28C51B3300BC2E99 /* Products */,
-				D26ED3C4894198BD90777BAF /* Pods */,
-				FF44E5024CE45AE81A41ECF5 /* Frameworks */,
 			);
+			path = Core;
 			sourceTree = "<group>";
 		};
-		C5AB522C28C51B3300BC2E99 /* Products */ = {
+		7ABEC06567384CD7D7619A32 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
-				C5AB522B28C51B3300BC2E99 /* Messenger.app */,
+				E792DA2901CA8EE6AF2955C5 /* Chat */,
+				F7114D3BA0595758BC1B90CD /* LogIn */,
+				72D3CD22DEF9B128B311BA5E /* Profile */,
+				8B73E845D507821C23C1D184 /* Shared */,
+				A3B75E82D2A428B0D6D96E84 /* SignUp */,
+				FE3D76949EEB27573C50F4CB /* TabBar */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		8B73E845D507821C23C1D184 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8BA7706E4968A77484B73FE6 /* Alert.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8DA6F63064AFB1E38F85041C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A71D435410193953B4614168 /* Messenger.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C5AB522D28C51B3300BC2E99 /* Messenger */ = {
+		A3B75E82D2A428B0D6D96E84 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				C5681A3328C51FE800F969E9 /* Application */,
-				C5681A4928C5210900F969E9 /* Core */,
-				C5681A3628C5202900F969E9 /* Presentation */,
-				C5681A4A28C5211900F969E9 /* Services */,
-				C5681A4B28C5211E00F969E9 /* SupportingFiles */,
+				B142DBA26A19E84A733D38C6 /* SignUpAssembly.swift */,
+				DAC2654AC2B9BBB1192875AA /* SignUpPresenter.swift */,
+				C1E5A02F582D2B228145821C /* SignUpRouter.swift */,
+				BA091174C8A0E17565ACF442 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A81D18E27554B2056D970287 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7ABEC06567384CD7D7619A32 /* UserStories */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BE4A4B10CFE50887C2647176 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+				4ABA4B7726A7F9E255829983 /* Application */,
+				7A215E34B2B85BAAA03E4834 /* Core */,
+				A81D18E27554B2056D970287 /* Presentation */,
+				5B84C564AABFE864E4EE7989 /* Services */,
+				F6C869D993D6265DA4BA0D32 /* SupportingFiles */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
 		};
-		D26ED3C4894198BD90777BAF /* Pods */ = {
+		D4E0CF54C0D785D3A332EE71 = {
 			isa = PBXGroup;
 			children = (
-				7453BF05C5D3F39AE3309EAD /* Pods-Messenger.debug.xcconfig */,
-				D63D3C43B0C804CD18B1E483 /* Pods-Messenger.release.xcconfig */,
+				BE4A4B10CFE50887C2647176 /* Messenger */,
+				8DA6F63064AFB1E38F85041C /* Products */,
+				3E578D2856A541EAEF5AAC2D /* Pods */,
+				DAF9D4A0EEDF4070A69D8ADC /* Frameworks */,
 			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
-		FF44E5024CE45AE81A41ECF5 /* Frameworks */ = {
+		DAF9D4A0EEDF4070A69D8ADC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50308E3980433006790E632D /* Pods_Messenger.framework */,
+				71690F88F0E67314424D1A31 /* Pods_Messenger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E792DA2901CA8EE6AF2955C5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F8BB43D6930EDAD4B839B43A /* ChatAssembly.swift */,
+				6CBCDC0A6DD4A2D55D0B6F89 /* ChatPresenter.swift */,
+				1A650C5469F0C7684903D7F6 /* ChatRouter.swift */,
+				D27CC59BADC71E10B0A727C9 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F6C869D993D6265DA4BA0D32 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D486F0AAAAA14C4B66E03939 /* Assets.xcassets */,
+				EA2E8AFBE4E81885F1BC8214 /* GoogleService-Info.plist */,
+				9955D31E286587DA2BBF239B /* Info.plist */,
+				0B789DF4A89984A2B14F6847 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F7114D3BA0595758BC1B90CD /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				FC19E84082D96DE3CB5B05B1 /* LogInAssembly.swift */,
+				62393B41906974940CE38CCE /* LogInPresenter.swift */,
+				A3B4C2447F6865373BE80CCF /* LogInRouter.swift */,
+				648661943390B2E87FAB45B9 /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		FE3D76949EEB27573C50F4CB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1895DB236E58E60743E58AB5 /* TabBarAssembly.swift */,
+				1725F1BDC421344C62D361BE /* TabBarPresenter.swift */,
+				4A66C9EBA5F18A02A81966A3 /* TabBarRouter.swift */,
+				F6009889A89E2C757E440CB6 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C5AB522A28C51B3300BC2E99 /* Messenger */ = {
+		77881911A29BD3D69877764F /* Messenger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C5AB523F28C51B3300BC2E99 /* Build configuration list for PBXNativeTarget "Messenger" */;
+			buildConfigurationList = F3DAC5C5C4D767119DC3EA0E /* Build configuration list for PBXNativeTarget "Messenger" */;
 			buildPhases = (
-				EE09E8ED9B8E4D376DD03721 /* [CP] Check Pods Manifest.lock */,
-				C5AB522728C51B3300BC2E99 /* Sources */,
-				C5AB522828C51B3300BC2E99 /* Frameworks */,
-				C5AB522928C51B3300BC2E99 /* Resources */,
-				2A5F567784A518E4FF11E8CD /* [CP] Embed Pods Frameworks */,
-				C5A72A4528C51EC100A5DECF /* ShellScript */,
+				DFAAF00E88496F0DD3B0BB5F /* [CP] Check Pods Manifest.lock */,
+				D83EDAF1424EC5C80C030F74 /* Sources */,
+				C5BBBAA285526EE0449D2541 /* SwiftLint */,
+				077BF981134D863345B5416B /* Resources */,
+				872B4E3431D20A9371FE58D9 /* Highlight TODOs and FIXMEs */,
+				2C49D7D6D1245D93ADA7A2E6 /* Frameworks */,
+				0789B869CB32C099B2F50D80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,57 +269,52 @@
 			);
 			name = Messenger;
 			productName = Messenger;
-			productReference = C5AB522B28C51B3300BC2E99 /* Messenger.app */;
+			productReference = A71D435410193953B4614168 /* Messenger.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C5AB522328C51B3300BC2E99 /* Project object */ = {
+		316D79176FB3C5F1E903C790 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1331;
 				TargetAttributes = {
-					C5AB522A28C51B3300BC2E99 = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
 				};
 			};
-			buildConfigurationList = C5AB522628C51B3300BC2E99 /* Build configuration list for PBXProject "Messenger" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 14834C2487612EC990D9572E /* Build configuration list for PBXProject "Messenger" */;
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = C5AB522228C51B3300BC2E99;
-			productRefGroup = C5AB522C28C51B3300BC2E99 /* Products */;
+			mainGroup = D4E0CF54C0D785D3A332EE71;
+			productRefGroup = 8DA6F63064AFB1E38F85041C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5AB522A28C51B3300BC2E99 /* Messenger */,
+				77881911A29BD3D69877764F /* Messenger */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C5AB522928C51B3300BC2E99 /* Resources */ = {
+		077BF981134D863345B5416B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AB523B28C51B3300BC2E99 /* LaunchScreen.storyboard in Resources */,
-				C5AB523828C51B3300BC2E99 /* Assets.xcassets in Resources */,
-				C526040628C69A87002A4595 /* GoogleService-Info.plist in Resources */,
+				4C43B33CB18EEBC5D3F43DBC /* Assets.xcassets in Resources */,
+				AB2653D9A6A38F403D1FE72D /* GoogleService-Info.plist in Resources */,
+				404C4BC07EF9F56A933D93B4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A5F567784A518E4FF11E8CD /* [CP] Embed Pods Frameworks */ = {
+		0789B869CB32C099B2F50D80 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,7 +331,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messenger/Pods-Messenger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5A72A4528C51EC100A5DECF /* ShellScript */ = {
+		872B4E3431D20A9371FE58D9 /* Highlight TODOs and FIXMEs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,15 +340,34 @@
 			);
 			inputPaths = (
 			);
+			name = "Highlight TODOs and FIXMEs";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) \\( -not -path \"*/Pods/*\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
 		};
-		EE09E8ED9B8E4D376DD03721 /* [CP] Check Pods Manifest.lock */ = {
+		C5BBBAA285526EE0449D2541 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" > /dev/null; then\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		DFAAF00E88496F0DD3B0BB5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,43 +392,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C5AB522728C51B3300BC2E99 /* Sources */ = {
+		D83EDAF1424EC5C80C030F74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50A94DE28C610C0006965B4 /* ChatRouter.swift in Sources */,
-				C5681A4528C520E400F969E9 /* SignUpRouter.swift in Sources */,
-				C50A94D528C60B50006965B4 /* TabBarAssembly.swift in Sources */,
-				C526040828C75BEF002A4595 /* Alert.swift in Sources */,
-				C5681A4328C520DC00F969E9 /* SignUpPresenter.swift in Sources */,
-				C52DEB5A28C53A1B0096F35A /* TabBarViewController.swift in Sources */,
-				C5681A4128C520D500F969E9 /* SignUpViewController.swift in Sources */,
-				C50A94E528C614B8006965B4 /* ProfileRouter.swift in Sources */,
-				C5681A4728C520EF00F969E9 /* SignUpAssembly.swift in Sources */,
-				C50A94DA28C610A4006965B4 /* ChatPresenter.swift in Sources */,
-				C50A94D328C60B42006965B4 /* TabBarRouter.swift in Sources */,
-				C50A94E128C61449006965B4 /* ProfileViewController.swift in Sources */,
-				C5681A3E28C520BB00F969E9 /* LogInRouter.swift in Sources */,
-				C50A94E728C614E3006965B4 /* ProfileAssembly.swift in Sources */,
-				C5681A3528C5202100F969E9 /* LogInViewController.swift in Sources */,
-				C5AB522F28C51B3300BC2E99 /* AppDelegate.swift in Sources */,
-				C50A94D128C60B39006965B4 /* TabBarPresenter.swift in Sources */,
-				C50A94DC28C610B7006965B4 /* ChatAssembly.swift in Sources */,
-				C5681A3C28C520A800F969E9 /* LogInPresenter.swift in Sources */,
-				C5AB523128C51B3300BC2E99 /* SceneDelegate.swift in Sources */,
-				C50A94D828C6109D006965B4 /* ChatViewController.swift in Sources */,
-				C50A94E328C6147F006965B4 /* ProfilePresenter.swift in Sources */,
-				C5681A3A28C5209F00F969E9 /* LogInAssembly.swift in Sources */,
+				EBEE64C77C192D59AC0EBEDB /* Alert.swift in Sources */,
+				B5F94AB56F1BE924A4E12F07 /* AppDelegate.swift in Sources */,
+				16D79F24A3955FC1F7BE9CB4 /* ChatAssembly.swift in Sources */,
+				5E5B44E80B210446603229FA /* ChatPresenter.swift in Sources */,
+				5D6132012EE97E6D636171EF /* ChatRouter.swift in Sources */,
+				97BFC98683A4C55FEDD42346 /* ChatViewController.swift in Sources */,
+				3D9022F928BCD8CED402BC5D /* LogInAssembly.swift in Sources */,
+				806FF080629196BA51B76B21 /* LogInPresenter.swift in Sources */,
+				9A8F5EF9F8E5FD694457570E /* LogInRouter.swift in Sources */,
+				2312628A26B8728B2626EFAD /* LogInViewController.swift in Sources */,
+				B283C8BDC5F5143755E8FAC9 /* ProfileAssembly.swift in Sources */,
+				FBA1DF4768C87A3666230D81 /* ProfilePresenter.swift in Sources */,
+				9A38670B5A0C8FC3D09D78A9 /* ProfileRouter.swift in Sources */,
+				9C39B3F2F932435804E12921 /* ProfileViewController.swift in Sources */,
+				08D0328F8464A13AD0849DF5 /* SceneDelegate.swift in Sources */,
+				813882B4D8FF0AC3E4EDD826 /* SignUpAssembly.swift in Sources */,
+				265123A24378EA35B6C9C945 /* SignUpPresenter.swift in Sources */,
+				A058AD97EBAB76EE201E1AC4 /* SignUpRouter.swift in Sources */,
+				26ED16E364644AC6BE2EA655 /* SignUpViewController.swift in Sources */,
+				329795D6BDBEC3CFA02D4F9C /* TabBarAssembly.swift in Sources */,
+				5A8023CCA88F46BE5F13C3ED /* TabBarPresenter.swift in Sources */,
+				488A2283379ABEAAF560A753 /* TabBarRouter.swift in Sources */,
+				E50BB6FE5BE3DE9EBCE3EC3B /* TabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C5AB523928C51B3300BC2E99 /* LaunchScreen.storyboard */ = {
+		0B789DF4A89984A2B14F6847 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C5AB523A28C51B3300BC2E99 /* Base */,
+				987788D172FEF52AAA57483A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -420,13 +436,14 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C5AB523D28C51B3300BC2E99 /* Debug */ = {
+		536D647F5F6AA52AA6A2ABD9 /* Develop */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -461,8 +478,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -470,23 +487,64 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
-			name = Debug;
+			name = Develop;
 		};
-		C5AB523E28C51B3300BC2E99 /* Release */ = {
+		5A582C87566C60A6F7659333 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C0F201F7B4177F9378244A /* Pods-Messenger.enterprise.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Messenger/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manigorman.education.Messenger;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Enterprise;
+		};
+		70BECB18AA018DD7DAD141F5 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F130976F8FAB0C2F6835F00 /* Pods-Messenger.develop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Messenger/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manigorman.education.Messenger;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Develop;
+		};
+		B3857DDD6A8E5075A2881136 /* Enterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -524,94 +582,39 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C5AB524028C51B3300BC2E99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7453BF05C5D3F39AE3309EAD /* Pods-Messenger.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MNX7G7328F;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messenger/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.manigorman.education.Messenger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
-		};
-		C5AB524128C51B3300BC2E99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D63D3C43B0C804CD18B1E483 /* Pods-Messenger.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MNX7G7328F;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messenger/SupportingFiles/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.manigorman.education.Messenger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
+			name = Enterprise;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C5AB522628C51B3300BC2E99 /* Build configuration list for PBXProject "Messenger" */ = {
+		14834C2487612EC990D9572E /* Build configuration list for PBXProject "Messenger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C5AB523D28C51B3300BC2E99 /* Debug */,
-				C5AB523E28C51B3300BC2E99 /* Release */,
+				536D647F5F6AA52AA6A2ABD9 /* Develop */,
+				B3857DDD6A8E5075A2881136 /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Develop;
 		};
-		C5AB523F28C51B3300BC2E99 /* Build configuration list for PBXNativeTarget "Messenger" */ = {
+		F3DAC5C5C4D767119DC3EA0E /* Build configuration list for PBXNativeTarget "Messenger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C5AB524028C51B3300BC2E99 /* Debug */,
-				C5AB524128C51B3300BC2E99 /* Release */,
+				70BECB18AA018DD7DAD141F5 /* Develop */,
+				5A582C87566C60A6F7659333 /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Develop;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C5AB522328C51B3300BC2E99 /* Project object */;
+	rootObject = 316D79176FB3C5F1E903C790 /* Project object */;
 }

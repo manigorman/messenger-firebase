@@ -7,8 +7,8 @@ target 'Messenger' do
 
   # Pods for Messenger
 
-  pod 'SwiftLint', '0.48.0'
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'SwiftLint'
+  pod 'SnapKit', '~> 5.6.0'
   
   pod 'FirebaseAuth'
 
