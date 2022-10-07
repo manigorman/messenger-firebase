@@ -19,8 +19,6 @@ final class SignUpViewController: UIViewController {
     private let presenter: ISignUpPresenter
     
     // Private
-    private lazy var indicator = UIActivityIndicatorView(style: .large)
-    
     private var activeField: UITextField?
     private var lastOffset = CGPoint()
     
@@ -33,6 +31,7 @@ final class SignUpViewController: UIViewController {
     private lazy var emailField = UITextField()
     private lazy var passwordField = UITextField()
     private lazy var button = UIButton()
+    private lazy var indicator = UIActivityIndicatorView(style: .large)
     
     // MARK: - Initialization
     

@@ -1,27 +1,29 @@
 //
-//  ChatViewController.swift
+//  ConversationViewController.swift
 //  Messenger
 //
-//  Created by Igor Manakov on 05.09.2022.
+//  Created by Igor Manakov on 05.10.2022.
 //
 
 import Foundation
 import UIKit
 
-protocol IChatView: AnyObject {
+protocol IConversationView: AnyObject {
     
 }
 
-final class ChatViewController: UIViewController {
+final class ConversationViewContoller: UIViewController {
     
     // Dependencies
-    private let presenter: IChatPresenter
+    private let presenter: IConversationPresenter
     
     // Private
     
+    // UI
+    
     // MARK: - Initialization
     
-    init(presenter: IChatPresenter) {
+    init(presenter: IConversationPresenter) {
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
@@ -36,11 +38,8 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.viewDidLoad()
-        
         setUpUI()
         setUpConstraints()
-        setUpDelegates()
     }
     
     // MARK: - Actions
@@ -48,20 +47,16 @@ final class ChatViewController: UIViewController {
     // MARK: - Private
     
     private func setUpUI() {
-        view.backgroundColor = .red
+        view.backgroundColor = .systemBackground
     }
     
     private func setUpConstraints() {
         
     }
-    
-    private func setUpDelegates() {
-        
-    }
 }
 
-// MARK: - IChatView
+// MARK: - IConversationView
 
-extension ChatViewController: IChatView {
+extension ConversationViewContoller: IConversationView {
     
 }

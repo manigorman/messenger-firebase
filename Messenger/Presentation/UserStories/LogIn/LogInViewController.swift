@@ -20,7 +20,6 @@ final class LogInViewController: UIViewController {
     private let presenter: ILogInPresenter
     
     // Private
-    private lazy var indicator = UIActivityIndicatorView(style: .large)
     
     // UI
     private lazy var scrollView = UIScrollView()
@@ -30,6 +29,7 @@ final class LogInViewController: UIViewController {
     private lazy var passwordField = UITextField()
     private lazy var button = UIButton()
     private lazy var helpButton = UIButton()
+    private lazy var indicator = UIActivityIndicatorView(style: .large)
     
     // MARK: - Initialization
     

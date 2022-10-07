@@ -10,6 +10,11 @@ target 'Messenger' do
   pod 'SwiftLint'
   pod 'SnapKit', '~> 5.6.0'
   
+  # Firebase
   pod 'FirebaseAuth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+
+  pod 'MessageKit'
 
 end

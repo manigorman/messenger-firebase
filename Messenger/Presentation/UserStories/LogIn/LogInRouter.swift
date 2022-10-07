@@ -10,7 +10,7 @@ import UIKit
 
 protocol ILogInRouter: AnyObject {
     func openSignIn()
-    func openChat()
+    func openChat(animated: Bool)
 }
 
 final class LogInRouter: ILogInRouter {
@@ -20,12 +20,12 @@ final class LogInRouter: ILogInRouter {
     
     // MARK: - ILogInRouter
     
-    func openChat() {
+    func openChat(animated: Bool) {
         let assembly = TabBarAssembly()
         let controller = assembly.assemble()
         controller.modalPresentationStyle = .fullScreen
         
-        transitionHandler?.present(controller, animated: true)
+        transitionHandler?.present(controller, animated: animated)
     }
 
     func openSignIn() {

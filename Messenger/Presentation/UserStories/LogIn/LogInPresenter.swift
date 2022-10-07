@@ -40,16 +40,18 @@ final class LogInPresenter {
 extension LogInPresenter: ILogInPresenter {
     
     func viewDidLoad() {
-        print("view did load")
+        if FirebaseAuth.Auth.auth().currentUser != nil {
+            router.openChat(animated: false)
+        }
     }
     
     func didTapLogIn(email: String, password: String) {
         view?.shouldActivityIndicatorWorking(true)
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-//            guard let strongSelf = self else {
-//                return
-//            }
+            //            guard let strongSelf = self else {
+            //                return
+            //            }
             DispatchQueue.main.async {
                 self?.view?.shouldActivityIndicatorWorking(false)
             }
@@ -61,12 +63,11 @@ extension LogInPresenter: ILogInPresenter {
             
             let user = result.user
             
-//            UserDefaults.standard.set(email, forKey: "email")
-            
+            //            UserDefaults.standard.set(email, forKey: "email")
+            self?.router.openChat(animated: true)
             print("Logged In User: \(user)")
-//            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            //            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         }
-//        router.openChat()
     }
     
     func didTapRegister() {
