@@ -10,6 +10,7 @@ import UIKit
 
 protocol IProfilePresenter: AnyObject {
     func viewDidLoad()
+    func handleLogOut()
 }
 
 final class ProfilePresenter {
@@ -35,5 +36,9 @@ final class ProfilePresenter {
 extension ProfilePresenter: IProfilePresenter {
     func viewDidLoad() {
         print("view did load")
+    }
+    
+    func handleLogOut() {
+        router.procedeLogIn()
     }
 }

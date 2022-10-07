@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol IProfileRouter: AnyObject {
-    
+    func procedeLogIn()
 }
 
 final class ProfileRouter: IProfileRouter {
@@ -18,4 +18,12 @@ final class ProfileRouter: IProfileRouter {
     weak var transitionHandler: UIViewController?
     
     // MARK: - IProfileRouter
+    
+    func procedeLogIn() {
+        let assembly = LogInAssembly()
+        
+        let controller = assembly.assemble()
+        controller.modalPresentationStyle = .fullScreen
+        transitionHandler?.tabBarController?.dismiss(animated: true)
+    }
 }

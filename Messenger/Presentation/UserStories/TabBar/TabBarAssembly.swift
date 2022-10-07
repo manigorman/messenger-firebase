@@ -19,17 +19,17 @@ final class TabBarAssembly {
         
         let controller = TabBarViewController(presenter: presenter)
         
-        let chatVC = createNavController(with: ChatAssembly().assemble(),
+        let chatsVC = createNavController(with: ChatsAssembly().assemble(),
                                          selected: UIImage(systemName: "message.fill"),
                                          unselected: UIImage(systemName: "message"),
-                                         title: "Messenger")
+                                         title: "Chat")
 
         let profileVC = createNavController(with: ProfileAssembly().assemble(),
                                             selected: UIImage(systemName: "person.fill"),
                                             unselected: UIImage(systemName: "person"),
                                             title: "Profile")
 
-        controller.setControllers([chatVC, profileVC], animated: false)
+        controller.setControllers([chatsVC, profileVC], animated: false)
         
         presenter.view = controller
         router.transitionHandler = controller
