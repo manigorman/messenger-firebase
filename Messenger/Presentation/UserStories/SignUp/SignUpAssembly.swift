@@ -5,7 +5,6 @@
 //  Created by Igor Manakov on 04.09.2022.
 //
 
-import Foundation
 import UIKit
 
 final class SignUpAssembly {

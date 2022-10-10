@@ -12,6 +12,7 @@ import SnapKit
 protocol ILogInView: AnyObject {
     func update()
     func shouldActivityIndicatorWorking(_ flag: Bool)
+    func showAlert(message: String)
 }
 
 final class LogInViewController: UIViewController {
@@ -65,11 +66,11 @@ final class LogInViewController: UIViewController {
     }
     
     @objc private func logInButtonTapped() {
+        
         guard let email = emailField.text,
               let password = passwordField.text,
-              !email.isEmpty,
-              !password.isEmpty,
-              password.count >= 6 else {
+        !email.isEmpty,
+        !password.isEmpty else {
             self.alertInfoError()
             return
         }
@@ -222,6 +223,10 @@ extension LogInViewController: ILogInView {
         } else {
             indicator.stopAnimating()
         }
+    }
+    
+    func showAlert(message: String) {
+        self.alertInfoError(message: message)
     }
 }
 
