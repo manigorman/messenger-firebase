@@ -22,6 +22,8 @@ final class LogInPresenter {
     
     private let router: ILogInRouter
     
+    private let validationService = ValidationService()
+    
     // Private
     
     // Models
@@ -46,12 +48,15 @@ extension LogInPresenter: ILogInPresenter {
     }
     
     func didTapLogIn(email: String, password: String) {
+        guard validationService.isValid(email, type: .email),
+              validationService.isValid(password, type: .password) else {
+            view?.showAlert(message: "Wrong email or password")
+            return
+        }
+        
         view?.shouldActivityIndicatorWorking(true)
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            //            guard let strongSelf = self else {
-            //                return
-            //            }
             DispatchQueue.main.async {
                 self?.view?.shouldActivityIndicatorWorking(false)
             }
@@ -63,10 +68,8 @@ extension LogInPresenter: ILogInPresenter {
             
             let user = result.user
             
-            //            UserDefaults.standard.set(email, forKey: "email")
             self?.router.openChat(animated: true)
             print("Logged In User: \(user)")
-            //            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         }
     }
     

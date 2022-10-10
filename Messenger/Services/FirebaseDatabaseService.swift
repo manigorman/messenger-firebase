@@ -1,5 +1,5 @@
 //
-//  FirebaseDatabase.swift
+//  FirebaseDatabaseService.swift
 //  Messenger
 //
 //  Created by Igor Manakov on 05.10.2022.
@@ -8,9 +8,7 @@
 import Foundation
 import FirebaseDatabase
 
-final class DatabaseManager {
-    
-    static let shared = DatabaseManager()
+final class FirebaseDatabaseService {
     
     private let database = Database.database().reference()
     
@@ -23,7 +21,7 @@ final class DatabaseManager {
 
 // MARK: - Account Management
 
-extension DatabaseManager {
+extension FirebaseDatabaseService {
     
     /// Errors
     public enum DatabaseError: Error {
@@ -32,7 +30,7 @@ extension DatabaseManager {
     
     /// Check if user already exists
     public func userExists(with email: String, completion: @escaping (Bool) -> Void) {
-        let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+        let safeEmail = FirebaseDatabaseService.safeEmail(emailAddress: email)
         
         database.child(safeEmail).observeSingleEvent(of: .value) { snapshot in
             guard snapshot.value as? String != nil else {
