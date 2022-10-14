@@ -16,7 +16,7 @@ final class ConversationCell: UITableViewCell {
         let image: UIImage
         let title: String
         let subtitle: String
-        let date: String
+        let date: Date
     }
     
     // UI
@@ -95,6 +95,6 @@ final class ConversationCell: UITableViewCell {
         self.image.image = model.image
         self.titleLabel.text = model.title
         self.subtitleLabel.text = model.subtitle
-        self.dateLabel.text = model.date
+        self.dateLabel.text = model.date.timeAgo()
     }
 }

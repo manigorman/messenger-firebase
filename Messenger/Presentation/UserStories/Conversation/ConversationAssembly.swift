@@ -14,7 +14,10 @@ final class ConversationAssembly {
     func assemble() -> UIViewController {
         let router = ConversationRouter()
         
-        let presenter = ConversationPresenter(router: router)
+        let firebaseDatabaseService = FirebaseDatabaseService()
+        
+        let presenter = ConversationPresenter(router: router,
+                                              firebaseDatabaseService: firebaseDatabaseService)
         
         let controller = ConversationViewContoller(presenter: presenter)
         

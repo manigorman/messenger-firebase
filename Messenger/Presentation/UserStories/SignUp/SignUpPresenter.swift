@@ -76,6 +76,8 @@ extension SignUpPresenter: ISignUpPresenter {
                         switch result {
                         case .success(let downloadUrl):
                             UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                            self.view?.shouldActivityIndicatorWorking(false)
+                            self.router.openChat()
                             print(downloadUrl)
                         case .failure(let error):
                             print("storage manager error: \(error)")
@@ -109,7 +111,5 @@ extension SignUpPresenter: ISignUpPresenter {
             
 //            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         }
-        
-        router.openChat()
     }
 }
