@@ -158,7 +158,7 @@ extension ChatsViewController: UITableViewDataSource {
         cell.configure(with: .init(image: UIImage(systemName: "person.fill")!,
                                    title: "Igor Manakov",
                                    subtitle: "Hey! What's up. Haven't seen for a long time. So, let hang out todays evening.",
-                                   date: "5м"))
+                                   date: Date()))
         
         return cell
     }

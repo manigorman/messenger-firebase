@@ -15,6 +15,7 @@ final class FirebaseDatabaseService {
     static func safeEmail(emailAddress: String) -> String {
         var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+        
         return safeEmail
     }
 }
@@ -105,5 +106,193 @@ extension FirebaseDatabaseService {
             
             completion(.success(value))
         }
+    }
+}
+
+// MARK: - Sending Messages / Conversations
+
+extension FirebaseDatabaseService {
+    
+    /// Creates a new conversation with target user email and first message sent
+    public func createNewConversation(with otherUserEmail: String, name: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+        
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        let safeEmail = FirebaseDatabaseService.safeEmail(emailAddress: currentEmail)
+        let ref = database.child("\(safeEmail)")
+        ref.observeSingleEvent(of: .value, andPreviousSiblingKeyWith: { snapshot, _ in
+            guard var userNode = snapshot.value as? [String: Any] else {
+                completion(false)
+                print("User not found")
+                return
+            }
+            
+//            let messageDate = firstMessage.sentDate
+//            let dateString = ChatVC.dateFormatter.string(from: messageDate)
+            
+            var message = ""
+            switch firstMessage.kind {
+            case .text(let messageText):
+                message = messageText
+            case .attributedText:
+                break
+            case .photo:
+                break
+            case .video:
+                break
+            case .location:
+                break
+            case .emoji:
+                break
+            case .audio:
+                break
+            case .contact:
+                break
+            case .linkPreview:
+                break
+            case .custom:
+                break
+            }
+            
+            let newConversationData: [String: Any] = [
+                "id": "conversation_\(firstMessage.messageId)",
+                "other_user_email": otherUserEmail,
+                "name": name,
+                "latest_message": [
+                    "date": "asdfasf",
+                    "message": message,
+                    "is_read": false
+                ]
+            ]
+            
+            if var conversations = userNode["conversations"] as? [[String: Any]] {
+                // conversation array exists for current user
+                // you should append
+                
+                conversations.append(newConversationData)
+                userNode["conversations"] = conversations
+                ref.setValue(userNode) { [weak self] error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    
+                    self?.finishCreatingConversation(name: name, conversationId: "conversation_\(firstMessage.messageId)", firstMessage: firstMessage, completion: completion)
+                }
+            } else {
+                // conversation array doesnot exist
+                // create it
+                userNode["conversations"] = [
+                    newConversationData
+                ]
+                
+                ref.setValue(userNode) { [weak self] error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    
+                    self?.finishCreatingConversation(name: name, conversationId: "conversation_\(firstMessage.messageId)", firstMessage: firstMessage, completion: completion)
+                }
+            }
+        })
+    }
+    
+    /// Creates conversation in new branch
+    private func finishCreatingConversation(name: String, conversationId: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+        var message = ""
+        switch firstMessage.kind {
+        case .text(let messageText):
+            message = messageText
+        case .attributedText:
+            break
+        case .photo:
+            break
+        case .video:
+            break
+        case .location:
+            break
+        case .emoji:
+            break
+        case .audio:
+            break
+        case .contact:
+            break
+        case .linkPreview:
+            break
+        case .custom:
+            break
+        }
+        
+//        let messageDate = firstMessage.sentDate
+//        let dateString = ChatVC.dateFormatter.string(from: messageDate)
+        
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            completion(false)
+            return
+        }
+        
+        let currentUserEmail = FirebaseDatabaseService.safeEmail(emailAddress: email)
+        
+        let collectionMessage: [String: Any] = [
+            "id": firstMessage.messageId,
+            "type": firstMessage.kind.messageKindString,
+            "content": message,
+            "date": "dsafad",
+            "sender_email": currentUserEmail,
+            "is_read": false,
+            "name": name
+        ]
+        
+        let value: [String: Any] = [
+            "messages": [
+                collectionMessage
+            ]
+        ]
+        
+        database.child("\(conversationId)").setValue(value) { error, _ in
+            guard error == nil else {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+    }
+    
+    /// Fetches and returns all conversations for the user with passed in email
+    public func getAllConversations(for email: String, completion: @escaping (Result<[Conversation], Error>) -> Void) {
+        database.child("\(email)/conversations").observe(.value, with: { snapshot in
+            guard let value = snapshot.value as? [[String: Any]] else {
+                completion(.failure(DatabaseError.failedToFetch))
+                return
+            }
+            
+            let conversations: [Conversation] = value.compactMap { dictionary in
+                guard let conversationId = dictionary["id"] as? String,
+                      let name = dictionary["name"] as? String,
+                      let otherUserEmail = dictionary["other_user_email"] as? String,
+                      let latestMessage = dictionary["latest_message"] as? [String: Any],
+                      let date = latestMessage["date"] as? String,
+                      let message = latestMessage["message"] as? String,
+                      let isRead = latestMessage["is_read"] as? Bool else {
+                    return nil
+                }
+                let latestMessageObject = LatestMessage(date: date, text: message, isRead: isRead)
+                
+                return Conversation(id: conversationId, name: name, otherUserEmail: otherUserEmail, latestMessage: latestMessageObject)
+            }
+            
+            completion(.success(conversations))
+        })
+    }
+    /// Gets all messages for a given conversation
+    public func getAllMessagesForConversation(with id: String, completion: @escaping (Result<String, Error>) -> Void) {
+        
+    }
+    
+    /// Sends a message with target conversation and message
+    public func sendMessage(to conversation: String, message: Message, completion: @escaping (Bool) -> Void) {
+        
     }
 }

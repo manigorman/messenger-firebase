@@ -8,7 +8,7 @@
 import UIKit
 
 protocol IConversationPresenter: AnyObject {
-    
+    func viewDidLoad()
 }
 
 final class ConversationPresenter {
@@ -17,13 +17,16 @@ final class ConversationPresenter {
     weak var view: IConversationView?
     
     private let router: IConversationRouter
+    private let firebaseDatabaseService: FirebaseDatabaseService
     
     // Private
     
     // MARK: - Initialization
     
-    init(router: IConversationRouter) {
+    init(router: IConversationRouter,
+         firebaseDatabaseService: FirebaseDatabaseService) {
         self.router = router
+        self.firebaseDatabaseService = firebaseDatabaseService
     }
         
 }
@@ -31,5 +34,6 @@ final class ConversationPresenter {
 // IConversationPresenter
 
 extension ConversationPresenter: IConversationPresenter {
-    
+    func viewDidLoad() {
+    }
 }
