@@ -13,9 +13,7 @@ final class TabBarAssembly {
     // MARK: - Public
     
     func assemble() -> UIViewController {
-        let router = TabBarRouter()
-        
-        let presenter = TabBarPresenter(router: router)
+        let presenter = TabBarPresenter()
         
         let controller = TabBarViewController(presenter: presenter)
         
@@ -32,7 +30,6 @@ final class TabBarAssembly {
         controller.setControllers([chatsVC, profileVC], animated: false)
         
         presenter.view = controller
-        router.transitionHandler = controller
         
         return controller
     }

@@ -61,8 +61,8 @@ final class LogInViewController: UIViewController {
     
     // MARK: - Actions
     
-    @objc private func didTapRegister() {
-        presenter.didTapRegister()
+    @objc private func didTapSignUp() {
+        presenter.didTapSignUp()
     }
     
     @objc private func logInButtonTapped() {
@@ -116,10 +116,10 @@ final class LogInViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "LogIn"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignUp",
                                                             style: .done,
                                                             target: self,
-                                                            action: #selector(didTapRegister))
+                                                            action: #selector(didTapSignUp))
         
         imageView.image = UIImage(systemName: "message.fill")
         imageView.contentMode = .scaleToFill

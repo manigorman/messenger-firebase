@@ -17,8 +17,7 @@ final class SignUpPresenter {
     
     // Dependencies
     weak var view: ISignUpView?
-    
-    private let router: ISignUpRouter
+    private let coordinator: IAuthCoordinator?
     
     private let validationService = ValidationService()
     private let databaseService = FirebaseDatabaseService()
@@ -30,8 +29,8 @@ final class SignUpPresenter {
     
     // MARK: - Initialization
     
-    init(router: ISignUpRouter) {
-        self.router = router
+    init(coordinator: IAuthCoordinator) {
+        self.coordinator = coordinator
     }
     
     // MARK: - Private
@@ -42,7 +41,6 @@ final class SignUpPresenter {
 extension SignUpPresenter: ISignUpPresenter {
     
     func viewDidLoad() {
-        print("view did load")
     }
     
     func didTapSignUp(email: String, password: String, firstName: String, lastName: String, image: UIImage?) {
@@ -77,7 +75,7 @@ extension SignUpPresenter: ISignUpPresenter {
                         case .success(let downloadUrl):
                             UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
                             self.view?.shouldActivityIndicatorWorking(false)
-                            self.router.openChat()
+//                            self.router.openChat()
                             print(downloadUrl)
                         case .failure(let error):
                             print("storage manager error: \(error)")

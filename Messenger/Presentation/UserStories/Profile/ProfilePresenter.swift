@@ -18,16 +18,13 @@ final class ProfilePresenter {
     // Dependencies
     weak var view: IProfileView?
     
-    private let router: IProfileRouter
-    
     // Private
     
     // Models
     
     // MARK: - Initialization
     
-    init(router: IProfileRouter) {
-        self.router = router
+    init() {
     }
     
     // MARK: - Private
@@ -39,6 +36,5 @@ extension ProfilePresenter: IProfilePresenter {
     }
     
     func handleLogOut() {
-        router.procedeLogIn()
     }
 }
