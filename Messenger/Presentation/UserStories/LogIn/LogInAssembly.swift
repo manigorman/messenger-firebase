@@ -12,15 +12,13 @@ final class LogInAssembly {
     
     // MARK: - Public
     
-    func assemble() -> UIViewController {
-        let router = LogInRouter()
+    func assemble(authCoordinator: AuthCoordinator) -> UIViewController {
         
-        let presenter = LogInPresenter(router: router)
+        let presenter = LogInPresenter(coordinator: authCoordinator)
         
         let controller = LogInViewController(presenter: presenter)
         
         presenter.view = controller
-        router.transitionHandler = controller
         
         return controller
     }

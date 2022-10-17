@@ -114,7 +114,7 @@ final class SignUpViewController: UIViewController {
     
     private func setUpUI() {
         view.backgroundColor = .systemBackground
-        title = "SignIn"
+        title = "SignUp"
         
         imageView.image = UIImage(systemName: "person")
         imageView.tintColor = .gray

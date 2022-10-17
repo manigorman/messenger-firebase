@@ -17,16 +17,13 @@ final class TabBarPresenter {
     // Dependencies
     weak var view: ITabBarView?
     
-    private let router: ITabBarRouter
-    
     // Private
     
     // Models
     
     // MARK: - Initialization
     
-    init(router: ITabBarRouter) {
-        self.router = router
+    init() {
     }
     
     // MARK: - Private    

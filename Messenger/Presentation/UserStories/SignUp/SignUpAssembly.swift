@@ -11,15 +11,12 @@ final class SignUpAssembly {
     
     // MARK: - Public
     
-    func assemble() -> UIViewController {
-        let router = SignUpRouter()
-        
-        let presenter = SignUpPresenter(router: router)
+    func assemble(authCoordinator: AuthCoordinator) -> UIViewController {
+        let presenter = SignUpPresenter(coordinator: authCoordinator)
         
         let controller = SignUpViewController(presenter: presenter)
         
         presenter.view = controller
-        router.transitionHandler = controller
         
         return controller
     }

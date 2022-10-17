@@ -13,14 +13,12 @@ final class ProfileAssembly {
     // MARK: - Public
     
     func assemble() -> UIViewController {
-        let router = ProfileRouter()
         
-        let presenter = ProfilePresenter(router: router)
+        let presenter = ProfilePresenter()
         
         let controller = ProfileViewController(presenter: presenter)
         
         presenter.view = controller
-        router.transitionHandler = controller
         
         return controller
     }

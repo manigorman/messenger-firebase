@@ -12,7 +12,7 @@ import FirebaseAuth
 protocol ILogInPresenter: AnyObject {
     func viewDidLoad()
     func didTapLogIn(email: String, password: String)
-    func didTapRegister()
+    func didTapSignUp()
 }
 
 final class LogInPresenter {
@@ -20,7 +20,7 @@ final class LogInPresenter {
     // Dependencies
     weak var view: ILogInView?
     
-    private let router: ILogInRouter
+    private let coordinator: IAuthCoordinator
     
     private let validationService = ValidationService()
     
@@ -30,8 +30,8 @@ final class LogInPresenter {
     
     // MARK: - Initialization
     
-    init(router: ILogInRouter) {
-        self.router = router
+    init(coordinator: IAuthCoordinator) {
+        self.coordinator = coordinator
     }
     
     // MARK: - Private
@@ -42,9 +42,6 @@ final class LogInPresenter {
 extension LogInPresenter: ILogInPresenter {
     
     func viewDidLoad() {
-        if FirebaseAuth.Auth.auth().currentUser != nil {
-            router.openChat(animated: false)
-        }
     }
     
     func didTapLogIn(email: String, password: String) {
@@ -68,12 +65,12 @@ extension LogInPresenter: ILogInPresenter {
             
             let user = result.user
             
-            self?.router.openChat(animated: true)
+            self?.coordinator.showTab()
             print("Logged In User: \(user)")
         }
     }
     
-    func didTapRegister() {
-        router.openSignIn()
+    func didTapSignUp() {
+        coordinator.didTapSignUp()
     }
 }
